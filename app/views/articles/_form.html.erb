@@ -1,0 +1,7 @@
+<%= form_for @article, :html => {:class => "form-horizontal center"} do |f| %>
+  <%= f.label :title, "Title:", class: "col-md-1 control-label" %>
+  <%= f.text_field :title, class: "form-control" %>
+  <%= f.label :content, "Content:", class: "col-md-1 control-label" %>
+  <%= f.text_area  :content, class: "form-control", rows: 20 %>
+  <%= f.submit "Submit", class: "btn btn-default btn-primary btn-block" %>
+<% end %>

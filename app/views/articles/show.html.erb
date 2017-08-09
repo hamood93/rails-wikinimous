@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-8 col-xs-offset-2">
+        <div class='article-title'><%= @article.title %></div>
+        <p><%=simple_format  @article.content %></p>
+        <p>Date created: <%= @article.created_at %></p>
+        <p>Date edited: <%= @article.updated_at %></p>
+
+        <%= link_to 'View all articles', articles_path %>
+        <%= link_to 'Edit article', article_path(@article)+"/edit" %>
+        <%= link_to "Delete", article_path(@article),
+          method: :delete,
+          data: { confirm: "Are you sure?" } %>
+    </div>
+  </div>
+</div>
